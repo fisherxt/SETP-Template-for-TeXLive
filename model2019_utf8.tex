@@ -1,0 +1,244 @@
+\documentclass[twoside]{cctart}
+\usepackage{headrule,vatola,amssymb}
+\usepackage{graphicx,multirow,bm}
+\usepackage{booktabs,dcolumn}%关于小数点对齐
+\newcolumntype{z}[1]{D{.}{.}{#1}}%关于小数点对齐
+\usepackage{tabularx}%关于表自动折行
+\usepackage{slashbox}%表格加斜线
+%\usepackage{footmisc,perpage}
+%\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}% 放在导言区
+%=========================Page Format (此部分定义请勿修改)================================
+\setlength{\voffset}{-5mm} \headsep 0.3 true cm \topmargin 0pt
+\oddsidemargin 0pt \footskip 2mm \evensidemargin 0pt \textheight
+24.5 true cm \textwidth 16.5 true cm \setcounter{page}{1}
+\parindent 2\ccwd
+\nofiles
+
+\TagsOnRight\baselineskip 12pt
+
+\catcode`@=11 \long\def\@makefntext#1{\parindent 1em\noindent
+\hbox to 0pt{\hss$^{}$}#1} \catcode`\@=12
+
+\catcode`@=11
+\def\evenhead{}
+\def\oddhead{}
+\headheight=8truemm
+% \footheight=0pt
+\def\@evenhead{\pushziti
+  \vbox{\hbox to\textwidth{\rlap{\rm\thepage}\hfil{\evenhead}\llap{}}
+    \protect\vspace{2truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth
+  }\popziti}
+\def\@oddhead{\pushziti
+  \vbox{\hbox to\textwidth{\rlap{}{\oddhead}\hfil\llap{\rm\thepage}}
+    \protect\vspace{2truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth
+  }\popziti}
+\def\@evenfoot{}
+\def\@oddfoot{}
+\catcode`@=12
+
+\renewcommand{\baselinestretch}{1.2}
+\def\d{\displaystyle} \def\n{\noindent}
+\def\ST{\songti\rm\relax}
+\def\HT{\heiti\bf\relax}
+\def\FS{\fangsong\relax}
+\def\KS{\kaishu\relax}
+\def\sz{\small \zihao{-5}}
+\def\vs{\vspace{0.3cm}}
+\def\ay{\arraycolsep=1.5pt}
+
+\def\SEC#1#2#3{\vspace*{.2in} \begin{center}
+{\LARGE\zihao{3}\HT #1}\\[.2in]
+\zihao{4}\fangsong#2\\[.1in]
+\small\zihao{-5}#3 \end{center}}
+
+\def\ESEC#1#2#3{\vskip.2in \begin{center}
+{\Large \HT #1}\\[.2in]
+\normalsize #2\\[.1in]
+\footnotesize #3 \end{center}}
+
+\def\SUB#1{\vspace{.15in} \leftline{\large\bf\heiti\zihao{-4}#1}
+\vspace{.07in}}
+\def\sub#1{\leftline{\bf\heiti\zihao{5}#1}}
+
+\def\REFERENCE{\vspace*{.2in}
+{\noindent\bf\heiti\zihao{5}参考文献} \vspace*{.1in}}
+%=========================================================================
+
+\begin{document}
+
+%--------------------------页眉-------------------------------------
+\def\evenhead{{\protect\small{\zihao{-5}\songti \hfill 系~统~工~程~理~论~与~实~践}
+\hfill{\zihao{-5}\songti 第} \,39\,{\zihao{-5}\songti 卷}}}
+\def\oddhead{{\protect{\zihao{-5}\songti 第}\small \,\,X\,{\zihao{-5}\songti 期}
+\hfill {\small\zihao{-5}\songti{孙会霞,等:论文文题}
+ }\hfill}}
+
+%---------------------------首页页眉---------------------------------
+\vspace*{-13mm} \thispagestyle{empty} \noindent \hbox to
+\textwidth{\small{\zihao{-5}\songti 第}\,\,39\,{\zihao{-5}\songti
+卷 第}\,\,X\,{\zihao{-5}\songti 期}\hfill {\zihao{5}
+系统工程理论与实践}\hfill Vol.39, No.X} \vskip -0.2mm
+\par\noindent
+\hbox to \textwidth{\small 2019 {\zihao{-5}\songti 年}\,\,X
+{\zihao{-5}\songti 月}\hfill Systems Engineering --- Theory \&
+Practice\hfill XXX., 2019} \vskip -0.3mm
+\par\noindent
+\rule[2mm]{\textwidth}{0.5pt}\hspace*{-\textwidth}\rule[1.5mm]{\textwidth}{0.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ziju{0.025} \vskip -7mm  \noindent {\small doi:\
+10.12011/1000-6788(2019)01-0001-11 \qquad \qquad {中图法分类号:}\ \ XXX %中图分类号从《中国图书馆分类法》(第四版)中查得。
+\qquad\qquad{文献标志码:\ \ A}}
+
+%-----------------------脚注--------------------------------------------------
+\footnotetext{{\HT 收稿日期:}\ 2017-11-14} \footnotetext{{\HT
+作者简介:}\ 孙会霞(1984--),女,山东临沂人,博士研究生,研究方向:
+公司金融,资本市场.} \footnotetext{{\HT 基金项目:}\
+国家自然科学基金(71102118)} \footnotetext{{\HT Foundation item:}\
+National Natural Science Foundation of China
+(71102118)}\footnotetext{{\HT 中文引用格式:}\
+陈正声,秦学志.多因素时变Markov链模型下考虑信用风险的互换期权定价[J].系统工程理论与实践,
+2019, 39(X): 1--10.} \footnotetext{{\HT 英文引用格式:}\ Chen Z S,
+Qin X Z. The valuation of swaption with counterparty risk under a
+multi-factor time-varying Markov chain model[J]. Systems
+Engineering --- Theory \& Practice, 2019, 39(X): 1--10.}
+
+%---------------------题目、作者、单位、摘要、关键词, 中图分类号(必须提供)------------------
+%\SEC{中文题目}{作者}{单位}
+\SEC{多因素时变Markov链模型下考虑信用风险的互换期权定价}
+{陈正声$^{1,2}$,秦学志$^{2}$} {(1. 大连银行\ 风险管理部, 大连
+116001; 2. 大连理工大学\ 管理与经济学部, 大连 116024)}
+
+
+\vskip.05in {\narrower\zihao{5}\fangsong\noindent {\heiti 摘\quad
+要}\ \
+
+
+\vskip.05in \noindent {\heiti 关键词}\ \
+
+
+
+}
+
+
+
+%%%%%%%%%%%%%%%英文部分%%%%%%%%%%%%%%%%%%%%%%%
+%\ESEC{英文题目}{作单}{单位}
+\ESEC{The valuation of swaption with counterparty risk under a
+multi-factor time-varying Markov chain model} {CHEN
+Zhengsheng$^{1,2}$, \ QIN Xuezhi$^{2}$} {(1. Department of Risk
+Management, Bank of Dalian, Dalian 116001, China; \\2. Faculty of
+Management and Economics, Dalian University of Technology, Dalian
+116024, China)}
+
+
+
+\vskip.05in \rm \noindent {\narrower\small {\bf Abstract}\ \
+
+
+
+
+\vskip.05in \noindent{\bf Keywords}\ \
+
+
+
+}
+
+
+\normalsize \normalsize \abovedisplayskip=2.0pt plus 2.0pt minus
+2.0pt \belowdisplayskip=2.0pt plus 2.0pt minus 2.0pt \baselineskip
+16pt
+
+%%%%%%%%%%%%%%%%%%%%%%%注意事项%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 全文所有的标点符号(包括括号、冒号、分号、逗号、句号等)都用``英文"中的标点符号, 即``半角"加空格.
+
+%%%%%%%%%%%%%%%%%%%%%%正文%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SUB{1\ \ 引言}%一级标题
+
+%\sub{1.1\ \ }二级标题命令
+%{\HT 定理1}\ \  {\HT 证明}\ \
+
+\begin{equation}
+f(d_{ij}) = {\rm e}^{-\gamma d_{ij}}.
+\end{equation}
+
+
+\begin{equation}
+\begin{aligned}
+B'&=-\partial\times E, \\
+E'&=\partial\times B-4\pi j.
+\end{aligned}
+\end{equation}
+
+
+\begin{equation}f(x)=
+\begin{cases}
+1,&-1<x<1, \\
+0,&\mbox{其他}.
+\end{cases}
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%插入表格%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\multirow{2}*{活动名称}%表格行中的内容上下居中.
+%\cmidrule(r){3-4}%表格划线中间断开
+\vspace{2mm}
+\begin{center}{\sz
+{\textbf{表1\ \  不同期限债券利率的描述性统计量}}\\
+\begin{tabular}{lccccccc} \toprule
+     & 0.5年期 &  1年期 &  2年期 &  3年期 &  5年期 & 7年期 & 10年期 \\
+\hline
+ 均值 & 0.0352   &0.0361  & 0.0385 & 0.0402   & 0.0433  & 0.0458  & 0.0475\\
+标准差  & 0.0176   & 0.0166  & 0.0153  &0.0137  & 0.0109  & 0.0097  &0.0076\\
+\bottomrule
+\end{tabular}}
+\end{center}\vspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%插入图片%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{2mm}\begin{center}
+%\includegraphics[scale=1]{1r.eps}\\
+%{\bf \sz 图1\ \
+%沪深股市指数对数收益率用正态核密度估计方法积分变换后的序列Q-Q图}
+\end{center}\vspace{2mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%参考文献%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\REFERENCE
+
+{\small \baselineskip 12pt
+
+%为反映论文的学术水平和创新程度,请主要引用最近3年以内发表的文献(最好引用期刊类文献).
+%作者可在本刊网站: http://www.sysengi.com免费下载查阅创刊以来的所有论文全文.
+%参考文献列表必须按正文中引用的先后顺序排序,所有被引用的文献须在正文中标明引用位置:
+%不做句子成份的文献以上角标形式标引,直接用$^{[1]}$形式标引即可,做句子成份的文献则与正文平排.
+%对于中外文的个人著者,一律采用姓前名后的著录方式.用汉语拼音书写的中国著者姓用全拼,名用缩写;欧美著者的名用缩写字母;缩写名后不用缩写点,
+%例如: Zhang J T, Calms R B. 作者数量多于三个人时，在第三个作者后面加``,等" 或``, et al".作者名之间用逗号分隔,不用``and".
+
+
+
+\REF{[1]}
+孙会霞, 苏峻, 何佳.
+股票供给控制、需求曲线与股价的反应------基于创业板的经验数据[J].
+系统工程理论与实践, 2013, 33(1): 1--11. \\
+Sun H X, Su J, He J. Control on supply of shares, demand curves
+and the reaction of stock price --- Based on the data of
+Chinext[J]. Systems Engineering --- Theory \& Practice, 2013,
+33(1): 1--11.%期刊著录格式
+
+\REF{[2]} Chen L. Corporate yield spreads and bond liquidity[R]. East Lansing: Michigan State University, 2005. %研究报告著录格式
+
+\REF{[3]} 席酉民, 王亚刚. 和谐社会秩序形成机制的系统分析:
+和谐管理理论的启示和价值[C]//
+中国系统工程学会第十四届学术年会论文集, 2006: 18--29.%会议论文著录格式
+
+\REF{[4]} Turcotte D L. Fractals and chaos in geology and
+geophysics[M/OL]. New York: Cambridge University Press, 1992
+[1998-09-23]. http://wwwsegorg/reviews/mccorm30.html.%电子文献著录格式，方括号内为引用日期
+
+}
+
+
+\end{document}
