@@ -3,27 +3,37 @@
 
 
 
+## 逃脱 `CCT` 原理
+
+基于以下博文中的方法和资源然后稍加改动：
+
+https://liam.page/2013/10/15/LaTeX-CCT-template/
+
+https://stone-zeng.github.io/2019-10-26-compile-cct-template/
+
+
+
 ## 食用方法
 
 在 `model2019_utf8.tex` 中愉快地书写。
 
 
 
-完美地适用于 `TeXLive` ，`MacOS` 也可以使用。
+完美地适用于 `TeXLive` ，`MacOS` 也可以使用（字体貌似有错位，但比起`CTeX`套装。。这重要吗）。
 
 
 
-轻松畅快地使用 `XeLaTeX` 编译。
+轻松畅快地使用 `XeLaTeX` 编译，或许 `luaLaTeX` 也可以（未测试）。
 
 
 
-等一切尘埃落定。
+等文章一切尘埃落定。
 
 
 
-使用 `UTF-8` 编码打开 `model2019_utf8.tex`，
+在文本编辑器中使用 `UTF-8` 编码打开 `model2019_utf8.tex`，
 
-使用 `GBK` 编码打开 `model2019_gbk.tex`，
+同时再使用 `GBK` 编码打开 `model2019_gbk.tex`，
 
 复制 --> 粘贴。
 
@@ -31,7 +41,7 @@
 
 最后，使用`model2019_gbk.tex`（或重命名后的文件） 投稿。
 
-保证投稿的文档是 `GBK` 的。
+务必保证投稿的文档编码是 `GBK` 。
 
 
 

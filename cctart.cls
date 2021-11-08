@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cctart}
 \PassOptionsToClass{\CurrentOption}{ctexart}
-\LoadClass[fontset=windows]{ctexart}
+\LoadClass{ctexart}
 \@namedef{ver@breakurl.sty}{9999/99/99}
 \newcommand\pushziti\empty
 \newcommand\popziti\empty
