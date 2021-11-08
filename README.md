@@ -17,17 +17,13 @@ https://stone-zeng.github.io/2019-10-26-compile-cct-template/
 
 在 `model2019_utf8.tex` 中愉快地书写。
 
-
-
 完美地适用于 `TeXLive` ，`MacOS` 也可以使用（字体貌似有错位，但比起`CTeX`套装。。这重要吗）。
-
-
 
 轻松畅快地使用 `XeLaTeX` 编译，或许 `luaLaTeX` 也可以（未测试）。
 
+...
 
-
-等文章一切尘埃落定。
+当文章一切尘埃落定。
 
 
 
@@ -35,7 +31,7 @@ https://stone-zeng.github.io/2019-10-26-compile-cct-template/
 
 同时再使用 `GBK` 编码打开 `model2019_gbk.tex`，
 
-复制 --> 粘贴。
+复制 --> 粘贴-->保存。
 
 
 
@@ -52,3 +48,5 @@ https://stone-zeng.github.io/2019-10-26-compile-cct-template/
 ## 注意事项：
 
 请不要轻易修改任何模板导言区内容。
+
+请不要轻易加载新的宏包，尤其是过于现代的宏包。
